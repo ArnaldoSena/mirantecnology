@@ -1,5 +1,5 @@
 package br.net.mirantecnology.model;
 
-public enum Tipo {
+public enum TipoTelefone {
 	CELULAR, FIXO, COMERCIAL;
 }

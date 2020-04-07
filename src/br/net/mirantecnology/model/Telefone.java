@@ -19,27 +19,31 @@ import javax.validation.constraints.Size;
 public class Telefone {
 
 @Id
-@Column(name = "id")
+@Column(name = "id_telefone")
 @GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+
 @NotNull
 @Size(min = 8, max = 10)
 @Column(nullable = false )
 	private String ddd ="000";
+
 @NotNull
 @Size(min = 8, max = 10)
 @Column(nullable = false )
 	private String numero = null;
+
 @NotNull
 @Column(nullable = false)
-	private Tipo tipo;
+	private TipoTelefone tipo;
+
 @NotNull
 @Column(name = "dt_cadastro")
 @Temporal(TemporalType.TIMESTAMP)
 	private Date dataCadastro = new Date();
 	
 	
-	public Telefone(@Min(3) String ddd, @NotNull @Size(min = 8, max = 10) String numero, Tipo tipo) {
+	public Telefone(@Min(3) String ddd, @NotNull @Size(min = 8, max = 10) String numero, TipoTelefone tipo) {
 		super();
 		this.ddd = ddd;
 		this.numero = numero;
@@ -59,10 +63,10 @@ public class Telefone {
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-	public Tipo getTipo() {
+	public TipoTelefone getTipo() {
 		return tipo;
 	}
-	public void setTipo(Tipo tipo) {
+	public void setTipo(TipoTelefone tipo) {
 		this.tipo = tipo;
 	}
 	public Date getDataCadastro() {
