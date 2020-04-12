@@ -15,22 +15,22 @@ import javax.validation.constraints.Size;
 @MappedSuperclass
 public abstract class Pessoa {
 
-@Id
-@Column(name = "id_pessoa")
-@GeneratedValue(strategy = GenerationType.AUTO)
+		@Id
+		@Column(name = "id_pessoa")
+		@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;	
 
-@NotNull
-@Size(min = 8, max = 10)
-@Column(nullable=false)
+		@NotNull
+		@Size(min = 8, max = 10)
+		@Column(nullable=false)
 	private String nome = "";
 
-@NotNull
-@Column(nullable=false, name = "dt_cadastro")
-@Temporal(TemporalType.TIMESTAMP)
+		@NotNull
+		@Column(nullable=false, name = "dt_cadastro")
+		@Temporal(TemporalType.TIMESTAMP)
 	private Date dataCadastro;
 
-@NotNull
-@Column(nullable=false)
+		@NotNull
+		@Column(nullable=false)
 	private TipoPessoa tipoPessoa;
 }

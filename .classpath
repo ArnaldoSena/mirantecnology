@@ -23,5 +23,15 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/EclipseLink 2.5.2">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+			<attribute name="owner.project.facets" value="jpt.jpa"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.datatools.connectivity.jdt.DRIVERLIBRARY/PostgreSQL JDBC Driver"/>
+	<classpathentry kind="lib" path="/Users/dodibsb/Downloads/hibernate-core-5.4.14.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/dodibsb/Downloads/byte-buddy-1.10.9.jar"/>
+	<classpathentry kind="lib" path="/Users/dodibsb/Downloads/persistence-api-1.0.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

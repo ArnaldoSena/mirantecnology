@@ -24,7 +24,7 @@ public class Telefone {
 	private long id;
 
 @NotNull
-@Size(min = 8, max = 10)
+@Size(min = 3, max = 3)
 @Column(nullable = false )
 	private String ddd ="000";
 
@@ -42,6 +42,7 @@ public class Telefone {
 @Temporal(TemporalType.TIMESTAMP)
 	private Date dataCadastro = new Date();
 	
+	public Telefone() {}
 	
 	public Telefone(@Min(3) String ddd, @NotNull @Size(min = 8, max = 10) String numero, TipoTelefone tipo) {
 		super();
@@ -50,7 +51,15 @@ public class Telefone {
 		this.tipo = tipo;
 	}
 	
-	//gets and setters
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public String getDdd() {
 		return ddd;
 	}
