@@ -4,6 +4,7 @@
 	<!-- <provider>org.hibernate.ejb.HibernatePersistence</provider>  -->
 	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 	<class>br.net.mirantecnology.model.Telefone</class>
+	<class>br.net.mirantecnology.model.Fisica</class>
 	
 	<properties>
 		<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
