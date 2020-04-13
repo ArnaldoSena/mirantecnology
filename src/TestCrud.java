@@ -4,6 +4,7 @@ import java.util.List;
 
 import br.net.mirantecnology.dao.PessoaDAO;
 import br.net.mirantecnology.model.Fisica;
+import br.net.mirantecnology.model.Juridica;
 import br.net.mirantecnology.model.Pessoa;
 import br.net.mirantecnology.model.Telefone;
 import br.net.mirantecnology.model.TipoPessoa;
@@ -19,8 +20,12 @@ public class TestCrud {
 		telefones.add(residencial);
 		Pessoa pFisica = new Fisica("Arnaldo de Sena Santos",TipoPessoa.FISICA,telefones,"69804427400",new Date(),"Olivia Maria de Sena Santos","Adjacy Gomes dos Santos");
 		PessoaDAO dao = PessoaDAO.getInstance();
-		dao.persist(pFisica);
-		System.out.println("Finish");
+		Pessoa pJuridica = new Juridica("Mirante Tecnologia", TipoPessoa.JURIDICA, telefones, "1023456000134");
+		//dao.persist(pFisica);
+		System.out.println("Pessoa Fisica");
+		dao.persist(pJuridica);
+		System.out.println("Pessoa Juridica");
+
 	}
 
 }

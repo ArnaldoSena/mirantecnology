@@ -7,6 +7,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import br.net.mirantecnology.model.Fisica;
+import br.net.mirantecnology.model.Juridica;
 import br.net.mirantecnology.model.Pessoa;
 
 public class PessoaDAO {
@@ -68,7 +69,8 @@ public class PessoaDAO {
 	      public void remove(Pessoa pessoa) {
 	        try {
 	           entityManager.getTransaction().begin();
-	           pessoa = entityManager.find(Pessoa.class, ((Fisica) pessoa).getId());
+	           if(pessoa instanceof Fisica) pessoa = entityManager.find(Pessoa.class, ((Fisica) pessoa).getId());
+	           else pessoa = entityManager.find(Pessoa.class, ((Juridica) pessoa).getId());
 	           entityManager.remove(pessoa);
 	           entityManager.getTransaction().commit();
 	        } catch (Exception ex) {
@@ -85,7 +87,4 @@ public class PessoaDAO {
 	           ex.printStackTrace();
 	        }
 	      }
-	
-
-
 }

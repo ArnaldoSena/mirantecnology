@@ -16,7 +16,7 @@ import javax.validation.constraints.Size;
 public abstract class Pessoa {
 
 		@NotNull
-		@Size(min = 3, max = 50)
+		@Size(min = 2, max = 100)
 		@Column(nullable=false)
 	private String nome = "";
 
@@ -32,7 +32,7 @@ public abstract class Pessoa {
 		@Column(nullable=true)
 	private List<Telefone> telefones;
 	
-	public Pessoa(@NotNull @Size(min = 3, max = 50) String nome,
+	public Pessoa(@NotNull @Size(min = 2, max = 100) String nome,
 				@NotNull TipoPessoa tipoPessoa, List<Telefone> telefones) {
 			super();
 			this.nome = nome;
